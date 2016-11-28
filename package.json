@@ -1,0 +1,41 @@
+{
+  "name": "react-code-toggle",
+  "version": "0.1.0",
+  "description": "A togglable react component for JSX/HTML code blocks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yosuzuk/react-code-toggle.git"
+  },
+  "author": "Yosuke Suzuki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yosuzuk/react-code-toggle/issues"
+  },
+  "homepage": "https://yosuzuk.github.io/react-code-toggle",
+  "keywords": [
+    "react-component",
+    "react"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "gh-pages": "^0.12.0",
+    "react-bootstrap": "^0.30.7",
+    "react-scripts": "0.7.0"
+  },
+  "peerDependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build"
+  },
+  "dependencies": {
+    "jsx-to-string": "^0.2.16",
+    "pretty": "^1.0.0",
+    "react-codemirror": "^0.3.0"
+  }
+}

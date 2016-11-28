@@ -1,0 +1,18 @@
+# basics
+*.swp
+*~
+*.iml
+.*.haste_cache.*
+.DS_Store
+.idea
+.babelrc
+.eslintrc
+npm-debug.log
+lib
+
+# website
+public
+src/App.js
+src/App.test.js
+src/index.js
+src/index.css
