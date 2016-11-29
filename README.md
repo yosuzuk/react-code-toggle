@@ -2,6 +2,8 @@
 
 A react component that renders its children with JSX and HTML code blocks that can be toggled.
 
+[Demo](https://yosuzuk.github.io/react-code-toggle/)
+
 ## Installation
 
 ```
@@ -14,7 +16,7 @@ $ npm install react-code-toggle --save
 import CodeToggle from 'react-code-toggle';
 ```
 
-And simply wrap your React components in <CodeToggle>:
+And simply wrap your React components in `<CodeToggle>`:
 
 ```javascript
     <CodeToggle>
