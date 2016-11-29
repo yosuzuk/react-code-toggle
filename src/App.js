@@ -10,40 +10,42 @@ class App extends Component {
         return (
             <CodeToggle>
                 <div className="App">
-                    <h2>React Code Toggle component</h2>
+                    <h2>react-code-toggle</h2>
 
                     <p>Usage</p>
                     <CodeToggle jsxCode={`
 <CodeToggle>
     <YourComponent someProp="hi" doIt={this.doesSomething()} />
-    <AnotherComponent>
-        <WhatEverYouLike />
-    </AnotherComponent>
 </CodeToggle>`
                     }>
                     </CodeToggle>
 
                     <CodeToggle>
-                        <ButtonToolbar>
-                            <Button>Default</Button>
-                            <Button bsStyle="primary">Primary</Button>
-                            <Button bsStyle="success">Success</Button>
-                            <Button bsStyle="info">Info</Button>
-                            <SplitButton bsStyle="default" title="Dropdown" key={0} id="split-button-basic-0">
-                                <MenuItem eventKey="1">Action</MenuItem>
-                                <MenuItem eventKey="2">Another action</MenuItem>
-                                <MenuItem eventKey="3">Something else here</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey="4">Separated link</MenuItem>
-                            </SplitButton>
-                        </ButtonToolbar>
+                        <CodeToggle>
+                            <Panel header={(<h2>Header</h2>)} bsStyle="primary">
+                                Content
+                            </Panel>
+                        </CodeToggle>
                     </CodeToggle>
 
                     <CodeToggle>
-                        <Panel header={(<h2>Header</h2>)}>
-                            Content
-                        </Panel>
+                        <CodeToggle>
+                            <ButtonToolbar>
+                                <Button>Default</Button>
+                                <Button bsStyle="primary">Primary</Button>
+                                <Button bsStyle="success">Success</Button>
+                                <Button bsStyle="info">Info</Button>
+                                <SplitButton bsStyle="default" title="Dropdown" key={0} id="split-button-basic-0">
+                                    <MenuItem eventKey="1">Action</MenuItem>
+                                    <MenuItem eventKey="2">Another action</MenuItem>
+                                    <MenuItem eventKey="3">Something else here</MenuItem>
+                                    <MenuItem divider />
+                                    <MenuItem eventKey="4">Separated link</MenuItem>
+                                </SplitButton>
+                            </ButtonToolbar>
+                        </CodeToggle>
                     </CodeToggle>
+
                 </div>
                 <br />
                 <p>This entire page is wrapped in <code>{'<CodeToggle />'}</code>.</p>

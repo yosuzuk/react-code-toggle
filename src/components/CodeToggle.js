@@ -18,15 +18,24 @@ import 'codemirror/theme/monokai.css';
 import '../css/code-toggle.css';
 
 const propTypes = {
-    formatHtml: React.PropTypes.bool,
-    jsxCode: React.PropTypes.string,
+    htmlBeautifier: React.PropTypes.func,
     htmlCode: React.PropTypes.string,
-    jsxOptions: React.PropTypes.object,
-    htmlOptions: React.PropTypes.object
+    htmlOptions: React.PropTypes.object,
+    jsxBeautifier: React.PropTypes.func,
+    jsxCode: React.PropTypes.string,
+    jsxOptions: React.PropTypes.object
 };
 
 const defaultProps = {
-    formatHtml: true,
+    htmlBeautifier: pretty,
+    htmlOptions: {
+        mode: 'htmlmixed',
+        indentUnit: 2,
+        readOnly: true,
+        theme: 'monokai',
+        viewportMargin: Infinity // for autoresize  
+    },
+    jsxBeautifier: x => x,
     jsxOptions: {
         mode: 'jsx',
         indentUnit: 2,
@@ -34,13 +43,6 @@ const defaultProps = {
         theme: 'monokai',
         viewportMargin: Infinity // for autoresize
     },
-    htmlOptions: {
-        mode: 'htmlmixed',
-        indentUnit: 2,
-        readOnly: true,
-        theme: 'monokai',
-        viewportMargin: Infinity // for autoresize  
-    }
 };
 
 class CodeToggle extends Component {
@@ -87,7 +89,7 @@ class CodeToggle extends Component {
         return this.state.showJsx ? (
             <div className="rct-jsx-code">
                 <CodeMirror
-                    value={this.props.jsxCode || this.renderChildren(jsxToString) || '{/* no code */}'}
+                    value={this.props.jsxBeautifier(this.props.jsxCode || this.renderChildren(jsxToString) || '{/* no code */}')}
                     options={this.props.jsxOptions}
                 />
             </div>
@@ -97,7 +99,7 @@ class CodeToggle extends Component {
         return this.state.showHtml ? (
             <div className="rct-html-code">
                 <CodeMirror
-                    value={pretty(this.props.htmlCode || this.renderChildren(renderToStaticMarkup) || '<!-- no code -->')}
+                    value={this.props.htmlBeautifier(this.props.htmlCode || this.renderChildren(renderToStaticMarkup) || '<!-- no code -->')}
                     options={this.props.htmlOptions}
                 />
             </div>

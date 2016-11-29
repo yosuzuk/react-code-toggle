@@ -16,6 +16,8 @@
     "react-component",
     "react"
   ],
+  "module": "index.js",
+  "jsnext:main": "index.js",
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "gh-pages": "^0.12.0",
