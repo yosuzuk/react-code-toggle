@@ -16,13 +16,19 @@
     "react-component",
     "react"
   ],
-  "module": "index.js",
-  "jsnext:main": "index.js",
+  "main": "dist/react-code-toggle.js",
   "devDependencies": {
-    "bootstrap": "^3.3.7",
-    "gh-pages": "^0.12.0",
-    "react-bootstrap": "^0.30.7",
-    "react-scripts": "0.7.0"
+    "babel-core": "~6.11.4",
+    "babel-loader": "~6.2.4",
+    "babel-preset-es2015": "~6.9.0",
+    "babel-preset-react": "~6.22.0",
+    "bootstrap": "~3.3.7",
+    "css-loader": "~0.26.1",
+    "gh-pages": "~0.12.0",
+    "react-bootstrap": "~0.30.7",
+    "react-scripts": "~0.7.0",
+    "style-loader": "~0.13.1",
+    "webpack": "~2.2.1"
   },
   "peerDependencies": {
     "react": "^15.4.1",
@@ -33,11 +39,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build",
+    "dist": "webpack --config ./config/webpack2.config.dist.js"
   },
   "dependencies": {
-    "jsx-to-string": "^0.2.16",
-    "pretty": "^1.0.0",
-    "react-codemirror": "^0.3.0"
+    "jsx-to-string": "~0.2.16",
+    "pretty": "~1.0.0",
+    "react-codemirror": "~0.3.0"
   }
 }
