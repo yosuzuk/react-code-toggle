@@ -12,6 +12,7 @@ lib
 
 # website
 public
+config
 src/App.js
 src/App.test.js
 src/index.js

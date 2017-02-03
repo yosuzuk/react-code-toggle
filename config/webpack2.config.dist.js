@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const isDebug = global.DEBUG === false ? false : !process.argv.includes('--release');
 const isVerbose = process.argv.includes('--verbose') || process.argv.includes('-v');
 
 const config = {
@@ -40,7 +39,7 @@ const config = {
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                warnings: false
+                warnings: isVerbose
             }
         }),
         new webpack.optimize.AggressiveMergingPlugin()
