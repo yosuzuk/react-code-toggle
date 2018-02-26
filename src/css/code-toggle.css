@@ -1,5 +1,6 @@
 .rct-container {
     margin-bottom: 36px;
+    font-family: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 .rct-live-example {

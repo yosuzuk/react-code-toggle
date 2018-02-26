@@ -22,8 +22,9 @@ class App extends Component {
 
                     <CodeToggle>
                         <CodeToggle>
-                            <Panel header={(<h2>Header</h2>)} bsStyle="primary">
-                                Content
+                            <Panel bsStyle="primary">
+                                <Panel.Heading>Heading</Panel.Heading>
+                                <Panel.Body>Content</Panel.Body>
                             </Panel>
                         </CodeToggle>
                     </CodeToggle>

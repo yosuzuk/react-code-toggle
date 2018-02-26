@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 // for JSX output
 import jsxToString from 'jsx-to-string';
@@ -8,7 +9,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import pretty from 'pretty';
 
 // for syntax highlighting
-import CodeMirror from 'react-codemirror';
+import { UnControlled as CodeMirror } from 'react-codemirror2';
 import 'codemirror/mode/jsx/jsx';
 import 'codemirror/mode/htmlmixed/htmlmixed';
 import 'codemirror/lib/codemirror.css';
@@ -18,12 +19,12 @@ import 'codemirror/theme/monokai.css';
 import '../css/code-toggle.css';
 
 const propTypes = {
-    htmlBeautifier: React.PropTypes.func,
-    htmlCode: React.PropTypes.string,
-    htmlOptions: React.PropTypes.object,
-    jsxBeautifier: React.PropTypes.func,
-    jsxCode: React.PropTypes.string,
-    jsxOptions: React.PropTypes.object
+    htmlBeautifier: PropTypes.func,
+    htmlCode: PropTypes.string,
+    htmlOptions: PropTypes.object,
+    jsxBeautifier: PropTypes.func,
+    jsxCode: PropTypes.string,
+    jsxOptions: PropTypes.object
 };
 
 const defaultProps = {
