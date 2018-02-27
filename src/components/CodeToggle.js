@@ -10,6 +10,7 @@ import pretty from 'pretty';
 
 // for syntax highlighting
 import { UnControlled as CodeMirror } from 'react-codemirror2';
+import 'codemirror';
 import 'codemirror/mode/jsx/jsx';
 import 'codemirror/mode/htmlmixed/htmlmixed';
 import 'codemirror/lib/codemirror.css';

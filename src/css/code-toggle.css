@@ -1,12 +1,13 @@
 .rct-container {
-    margin-bottom: 36px;
     font-family: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    margin-bottom: 36px;
 }
 
 .rct-live-example {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px 4px 0 0;
+    font-family: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
     padding: 45px 15px 15px 15px;
     position: relative;
 }

@@ -15,9 +15,8 @@ const config = {
     externals: [
         'react',
         'jsx-to-string',
-        'react-dom/server',
         'pretty',
-        'react-codemirror',
+        'react-codemirror2',
         'codemirror/mode/jsx/jsx',
         'codemirror/mode/htmlmixed/htmlmixed'
     ],
