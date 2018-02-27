@@ -84,6 +84,7 @@ Example for Webpack config:
 
 ## Dependencies
 
-* [react-codemirror](https://github.com/JedWatson/react-codemirror)
+* [react-codemirror2](https://github.com/scniro/react-codemirror2)
 * [jsx-to-string](https://github.com/alansouzati/jsx-to-string)
 * [pretty](https://github.com/jonschlinkert/pretty)
+* prop-types
