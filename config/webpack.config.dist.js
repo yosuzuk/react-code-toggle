@@ -1,12 +1,10 @@
-const webpack = require('webpack');
 const path = require('path');
 
-const isVerbose = process.argv.includes('--verbose') || process.argv.includes('-v');
-
 const config = {
+    mode: 'production',
     entry: './src/components/CodeToggle.js',
     output: {
-        path: './dist',
+        path: path.resolve(__dirname, '../dist'),
         filename: 'react-code-toggle.js',
         library: 'react-code-toggle',
         libraryTarget: 'umd',
@@ -34,15 +32,7 @@ const config = {
         fs: 'empty',
         net: 'empty',
         tls: 'empty'
-    },
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: isVerbose
-            }
-        }),
-        new webpack.optimize.AggressiveMergingPlugin()
-    ]
+    }
 };
 
 module.exports = config;
